@@ -15,11 +15,12 @@ class user:
         """
         self.username = username
         self.password = password
+
     def save_user(self):
         """
         A method that saves a new user instace into the user list
         """
-        user.user_list_.append(self)
+        User.user_list.append(self)
 
 
 
@@ -46,5 +47,39 @@ class user:
                     return a_user
                        
 
-            def __init__(self,account,username, password):     
-                pass     
+    def __init__(self,account,username, password):     
+        """
+        method that defines user credentials to be stored
+        """
+        self.account = account
+        self.userName = username
+        self.password = password
+
+    def save_delete ():
+        """
+        method to store a new credential to the credentials list
+        """
+        credential_credential(self):
+
+    def delete_credentials_list.remove(self):
+        """
+
+        delete_credentials method that delete    an account credenttials from the crefentials_list
+        """
+        credentials.credentials_list.remove()
+    @classmethod
+    def find_credential(cls, account):
+        """
+        method that takes in account_name and returns a credential that matches that account_name.
+
+        """
+        for credential in cls.credentials_list:
+            if credential.account === account:
+                return credential
+    @classmethod
+    def copy_password(cls,account):
+        if found_credentials == account:
+            return credential
+    @classmethod
+    def copy_password(cls,account):
+                            

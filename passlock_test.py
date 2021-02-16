@@ -37,13 +37,13 @@ class TestCredentials(unittest.TestCase):
         Method that runs before each individual credentials test methods run.
 
         """
-        self.new_credential = Credentials('Gmail','Owiti_Charles','yx5Gij43')
+        self.new_credential = Credentials('Gmail','davidhashisoma','yx5Gij43')
     def test_init(self):
         """
         Test case to check if a new Credentials instance has been initialized correctly
         """
         self.assertEqual(self.new_credential.account,'Gmail')
-        self.assertEqual(self.new_credential.userName,'Owiti_Charles')
+        self.assertEqual(self.new_credential.userName,'davidhashisoma')
         self.assertEqual(self.new_credential.password,'yx5Gij43')
 
     def save_credential_test(self):
@@ -74,7 +74,7 @@ class TestCredentials(unittest.TestCase):
         test method to test if we can remove an account credentials from our credentials_list
         """
         self.new_credential.save_details()
-        test_credential = Credentials("Twitter","mikeycharles","Mfh45hfk")
+        test_credential = Credentials("Twitter","@hashisomadavid","Mfh45hfk")
         test_credential.save_details()
 
         self.new_credential.delete_credentials()
@@ -85,7 +85,7 @@ class TestCredentials(unittest.TestCase):
         test to check if we can find a credential entry by account name and display the details of the credential
         """
         self.new_credential.save_details()
-        test_credential = Credentials("Twitter","mikeycharles","Mfh45hfk") 
+        test_credential = Credentials("Twitter","@hashisomadavid","Mfh45hfk") 
         test_credential.save_details()
 
         the_credential = Credentials.find_credential("Twitter")
@@ -97,7 +97,7 @@ class TestCredentials(unittest.TestCase):
         test to check if we can return a true or false based on whether we find or can't find the credential.
         """
         self.new_credential.save_details()
-        the_credential = Credentials("Twitter", "mikeycharles", "Mfh45hfk")  
+        the_credential = Credentials("Twitter", "@hashisomadavid", "Mfh45hfk")  
         the_credential.save_details()
         credential_is_found = Credentials.if_credential_exist("Twitter")
         self.assertTrue(credential_is_found)

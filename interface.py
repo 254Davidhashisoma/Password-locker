@@ -2,7 +2,8 @@
 from passlock import User, Credentials
 
 def function():
-	print(" password locker   ")
+	print(" voult lockker              ")
+	print("  voult lockker             ")
 function()
 
 def create_new_user(username,password):
@@ -29,6 +30,7 @@ def login_user(username,password):
   
     check_user = Credentials.verify_user(username,password)
     return check_user
+
 def create_new_credential(account,userName,password):
     """
     Function that creates new credentials for a given user account
@@ -39,7 +41,7 @@ def save_credentials(credentials):
     """
     Function to save Credentials to the credentials list
     """
-    credentials. save_details()   
+    credentials. save_details()
 def display_accounts_details():
     """
     Function that returns all the saved credential.
@@ -56,7 +58,7 @@ def delete_credential(credentials):
 def find_credential(account):
     """
     Function that finds a Credentials by an account name and returns the Credentials that belong to that account
-    """         
+    """
     return Credentials.find_credential(account)
 def check_credendtials(account):
     """
@@ -77,6 +79,8 @@ def copy_password(account):
     We import the framework then declare a function that copies the emails.
     """
     return Credentials.copy_password(account)
+
+
 def passlocker():
     print("Hello Welcome to your Accounts Password Store...\n Please enter one of the following to proceed.\n CA ---  Create New Account  \n LI ---  Have An Account  \n")
     short_code=input("").lower().strip()

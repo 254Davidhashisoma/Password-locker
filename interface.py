@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-from passlock import User, Credentials
+from password import User, Credentials
 
 def function():
 	print(" voult lockker              ")
@@ -67,12 +67,12 @@ def check_credendtials(account):
     """
     return Credentials.if_credential_exist(account)
 
-def generate_Password():
-    '''
-    generates a random password for the user.
-    '''
-    auto_password=Credentials.generatePassword()
-    return auto_password
+# def generate_Password():
+#     '''
+#     generates a random password for the user.
+#     '''
+#     auto_password=Credentials.()
+#     return auto_password
 def copy_password(account):
     """
     A funct that copies the password using the pyperclip framework
@@ -89,14 +89,14 @@ def passlocker():
         print('*' * 50)
         username = input("User_name: ")
         while True:
-            print(" TP - To type your own pasword:\n GP - To generate random Password")
+            print(" TP - To type your own pasword:\n ")
             password_Choice = input().lower().strip()
             if password_Choice == 'tp':
                 password = input("Enter Password\n")
                 break
-            elif password_Choice == 'gp':
-                password = generate_Password()
-                break
+            # elif password_Choice == 'gp':
+            #     password = generate_Password()
+            #     break
             else:
                 print("Invalid password please try again")
         save_user(create_new_user(username,password))
@@ -129,9 +129,9 @@ def passlocker():
                 if password_Choice == 'tp':
                     password = input("Enter Your Own Password\n")
                     break
-                elif password_Choice == 'gp':
-                    password = generate_Password()
-                    break
+                # elif password_Choice == 'gp':
+                #     password = generate_Password()
+                #     break
                 else:
                     print("Invalid password please try again")
             save_credentials(create_new_credential(account,userName,password))
@@ -175,13 +175,13 @@ def passlocker():
             else:
                 print("That Credential you want to delete does not exist in your store yet")
 
-        elif short_code == 'gp':
+        # elif short_code == 'gp':
 
-            password = generate_Password()
-            print(f" {password} Has been generated succesfull. You can proceed to use it to your account")
-        elif short_code == 'ex':
-            print("Thanks for using passwords store manager.. See you next time!")
-            break
+        #     password = generate_Password()
+        #     print(f" {password} Has been generated succesfull. You can proceed to use it to your account")
+        # elif short_code == 'ex':
+        #     print("Thanks for using passwords store manager.. See you next time!")
+        #     break
         else:
             print("Wrong entry... Check your entry again and let it match those in the menu")
     else:
